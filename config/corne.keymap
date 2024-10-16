@@ -95,8 +95,8 @@
             display-name = "BASE";
             bindings = <
 &kp ESC   &kp X        &kp W       &kp M       &kp G        &sca          &scc         &scf         &scg        &kp J       &kp B        &sch
-&kp Z     &hm LCTRL S  &hm LALT C  &hm LCMD N  &hm LSHFT T  &kp K         &scd         &hm RSHFT A  &hm RCMD E  &hm RALT I  &hm RCTRL H  &shi
-&kp CAPS  &kp V        &kp P       &kp L       &kp D        &scb          &sce         &kp U        &kp O       &kp Y       &kp F        &shj
+&kp Z     &hm LCTRL S  &hm LALT C  &hm LCMD N  &hm LSHFT T  &kp K         &scd         &hm RSHFT A  &hm RCMD E  &hm RALT I  &hm RCTRL H  &sci
+&kp CAPS  &kp V        &kp P       &kp L       &kp D        &scb          &sce         &kp U        &kp O       &kp Y       &kp F        &scj
                                    &kp Q       &kp R        &lt 2 BSPC    &lt 1 SPACE  &kp RET      &kp TAB
             >;
         };
@@ -105,9 +105,9 @@
             display-name = "RGHT";
             bindings = <
 &none  &none     &none     &none      &kp CARET  &none      &none  &kp F7  &kp F8  &kp F9  &kp F12  &none
-&none  &kb BSLH  &kb PIPE  &kb PRCNT  &kb AMPS   &none      &none  &kp F4  &kp F5  &kp F6  &kb F11  &none
-&none  &none     &none     &none      &none      &none      &none  &kb F1  &kb F2  &kb F3  &kb F10  &none
-                           &none      &kb INS    &kp DEL    &none  &none   &none
+&none  &kp BSLH  &kp PIPE  &kp PRCNT  &kp AMPS   &none      &none  &kp F4  &kp F5  &kp F6  &kp F11  &none
+&none  &none     &none     &none      &none      &none      &none  &kp F1  &kp F2  &kp F3  &kp F10  &none
+                           &none      &kp INS    &kp DEL    &none  &none   &none
             >;
         };
 
@@ -115,8 +115,8 @@
             display-name = "LEFT";
             bindings = <
 &none  &none    &none      &none      &kp C_BRI_UP  &none    &kp FSLH  &kp N7   &kp N8  &kp N9  &kp EQUAL  &none
-&none  &kb END  &kb PG_DN  &kb PG_UP  &kb HOME      &none    &kp STAR  &kp N4   &kp N5  &kp N6  &kp PLUS   &none
-&none  &none    &none      &none      &kb C_BRI_DN  &none    &kp none  &kp N1   &kp N2  &kp N3  &kp MINUS  &none
+&none  &kp END  &kp PG_DN  &kp PG_UP  &kp HOME      &none    &kp STAR  &kp N4   &kp N5  &kp N6  &kp PLUS   &none
+&none  &none    &none      &none      &kp C_BRI_DN  &none    &none     &kp N1   &kp N2  &kp N3  &kp MINUS  &none
                            &none      &none         &none    &kp N0    &kb DOT  &none
             >;
         };
