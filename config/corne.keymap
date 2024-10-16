@@ -9,54 +9,115 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_all {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+    };
+
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        sca: special_character_a {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp EXCL>, <&kp QMARK>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        scb: special_character_b {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp FSLH>, <&kp STAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        scc: special_character_c {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp HASH>, <&kp DLLR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        scd: special_character_d {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sce: special_character_e {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp PLUS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        scf: special_character_f {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        scg: special_character_g {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DQT>, <&kp SQT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sch: special_character_h {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp C_VOL_UP>, <&kp C_PREV>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sci: special_character_i {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp C_MUTE>, <&kp C_PP>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        scj: special_character_j {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp C_VOL_DN>, <&kp C_NEXT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
-            display-name = "Base";
+            display-name = "BASE";
             bindings = <
-&kp ESC   &kp X  &kp W  &kp M  &kp G  &kp EXCLAMATION    &kp HASH   &kp PERIOD  &kp DOUBLE_QUOTES  &kp J  &kp B  &kp C_VOL_UP
-&kp Z     &kp S  &kp C  &kp N  &kp T  &kp K              &kp COMMA  &kp A       &kp E              &kp I  &kp H  &kp K_MUTE
-&kp CAPS  &kp V  &kp P  &kp L  &kp D  &kp SLASH          &kp MINUS  &kp U       &kp O              &kp Y  &kp F  &kp C_VOL_DN
-                        &kp Q  &kp R  &kp BACKSPACE      &kp SPACE  &kp ENTER   &kp TAB
+&kp ESC   &kp X        &kp W       &kp M       &kp G        &sca          &scc         &scf         &scg        &kp J       &kp B        &sch
+&kp Z     &hm LCTRL S  &hm LALT C  &hm LCMD N  &hm LSHFT T  &kp K         &scd         &hm RSHFT A  &hm RCMD E  &hm RALT I  &hm RCTRL H  &shi
+&kp CAPS  &kp V        &kp P       &kp L       &kp D        &scb          &sce         &kp U        &kp O       &kp Y       &kp F        &shj
+                                   &kp Q       &kp R        &lt 2 BSPC    &lt 1 SPACE  &kp RET      &kp TAB
             >;
         };
 
-        lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            display-name = "Lower";
+        symbol_function_layer {
+            display-name = "RGHT";
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &trans
-                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
+&none  &none     &none     &none      &kp CARET  &none      &none  &kp F7  &kp F8  &kp F9  &kp F12  &none
+&none  &kb BSLH  &kb PIPE  &kb PRCNT  &kb AMPS   &none      &none  &kp F4  &kp F5  &kp F6  &kb F11  &none
+&none  &none     &none     &none      &none      &none      &none  &kb F1  &kb F2  &kb F3  &kb F10  &none
+                           &none      &kb INS    &kp DEL    &none  &none   &none
             >;
         };
 
-        raise_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            display-name = "Raise";
+        numpad_navigation_layer {
+            display-name = "LEFT";
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&none  &none    &none      &none      &kp C_BRI_UP  &none    &kp FSLH  &kp N7   &kp N8  &kp N9  &kp EQUAL  &none
+&none  &kb END  &kb PG_DN  &kb PG_UP  &kb HOME      &none    &kp STAR  &kp N4   &kp N5  &kp N6  &kp PLUS   &none
+&none  &none    &none      &none      &kb C_BRI_DN  &none    &kp none  &kp N1   &kp N2  &kp N3  &kp MINUS  &none
+                           &none      &none         &none    &kp N0    &kb DOT  &none
             >;
         };
     };
