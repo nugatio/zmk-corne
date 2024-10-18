@@ -88,7 +88,7 @@
         };
         combo_lbracket {
             timeout-ms = <65>;
-            key-positions = 21 22>;
+            key-positions = <21 22>;
             bindings = <&kp LBKT>;
         };
         combo_lessthan {
