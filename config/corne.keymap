@@ -187,6 +187,12 @@ combos {
             bindings = <&kp C_VOL_DN>, <&kp C_NEXT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        sck: special_character_k {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&lt 2 BSPC>, <&kp LA(BSPC)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -195,10 +201,10 @@ combos {
         default_layer {
             display-name = "BASE";
             bindings = <
-&kp ESC   &kp X        &kp W       &kp M       &kp G        &sca          &scc         &scf         &scg        &kp J       &kp B        &sch
-&kp Z     &hm LCTRL S  &hm LALT C  &hm LCMD N  &hm LSHFT T  &kp K         &scd         &hm RSHFT A  &hm RCMD E  &hm RALT I  &hm RCTRL H  &sci
-&kp CAPS  &kp V        &kp P       &kp L       &kp D        &scb          &sce         &kp U        &kp O       &kp Y       &kp F        &scj
-                                   &kp Q       &kp R        &lt 2 BSPC    &lt 1 SPACE  &kp RET      &kp TAB
+&kp ESC   &kp X        &kp W       &kp M       &kp G        &sca     &scc         &scf         &scg        &kp J       &kp B        &sch
+&kp Z     &hm LCTRL S  &hm LALT C  &hm LCMD N  &hm LSHFT T  &kp K    &scd         &hm RSHFT A  &hm RCMD E  &hm RALT I  &hm RCTRL H  &sci
+&kp CAPS  &kp V        &kp P       &kp L       &kp D        &scb     &sce         &kp U        &kp O       &kp Y       &kp F        &scj
+                                   &kp Q       &kp R        &sck     &lt 1 SPACE  &kp RET      &kp TAB
             >;
         };
 
