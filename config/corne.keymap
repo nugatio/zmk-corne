@@ -22,7 +22,7 @@ nugatio@2024.09.20 (https://github.com/nugatio/zmk-corne-config)
 // DEFINITION
 
 / {
-#include "c0mbos.dtsi"     // combos
+#include "combos.dtsi"     // combos
 #include "behaviors.dtsi"  // behaviors
 #include "macros.dtsi"     // macros
 #include "keymap.dtsi"     // keymap
