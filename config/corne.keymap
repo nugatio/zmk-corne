@@ -15,7 +15,8 @@ nugatio@2024.09.20 (https://github.com/nugatio/zmk-corne-config)
 #include <dt-bindings/zmk/keys.h>
 
 // other
-#include positions.dtsi    // positions
+#include "settings.dtsi"   // settings
+#include "positions.dtsi"  // positions
 
 
 // DEFINITION

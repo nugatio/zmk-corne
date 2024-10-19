@@ -9,8 +9,6 @@ nugatio@2024.09.20 (https://github.com/nugatio/zmk-corne-config)
 
 // DEFINITION
 
-settings {
-    // timing
-    combo_timeout_ms = <65>;
-    homerow_tapping_term_ms = <200>;
-};
+// timing
+#define COMBO_TIMEOUT 65
+#define HOMEROW_TAPPING_TERM 200
