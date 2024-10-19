@@ -1,0 +1,16 @@
+/*
+SETTINGS
+
+keyboard: corne (https://github.com/foostan/crkbd)
+firmware: zmk (https://zmk.dev/)
+nugatio@2024.09.20 (https://github.com/nugatio/zmk-corne-config)
+*/
+
+
+// DEFINITION
+
+settings {
+    // timing
+    combo_timeout_ms = <65>;
+    homerow_tapping_term_ms = <200>;
+};
