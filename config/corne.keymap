@@ -17,6 +17,7 @@ nugatio@2024.09.20 (https://github.com/nugatio/zmk-corne-config)
 // other
 #include "settings.dtsi"   // settings
 #include "positions.dtsi"  // positions
+#include "display.dtsi"    // display
 
 
 // DEFINITION
