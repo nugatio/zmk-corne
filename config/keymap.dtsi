@@ -38,6 +38,15 @@ base_layer {
                  ╰─────────────╯ ╰─────────────╯
     */
 
+    /* combo layout
+         ╭─────────────────────╮ ╭─────────────────────╮
+         │       RDO PST QIT   │ │    @   _   =   &    │
+         │   All UND CPY NEW   │ │    {   (   [   <    │
+         │       FND CUT CLS   │ │    }   )   ]   >    │
+         ╰───────╮             │ │             ╭───────╯
+                 ╰─────────────╯ ╰─────────────╯
+    */
+
     display-name = "BASE";
     bindings = <
     &kp ESC   &kp X        &kp W       &kp M       &kp G        &mseq    &mshd           &msdc         &msds       &kp J       &kp B        &msvup
