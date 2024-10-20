@@ -3,6 +3,8 @@ OVERVIEW
 
 keyboard: corne (https://github.com/foostan/crkbd)
 firmware: zmk (https://zmk.dev/)
+layout: hands down (https://sites.google.com/alanreiser.com/handsdown/)
+
 nugatio@2024.09.20 (https://github.com/nugatio/zmk-corne-config)
 */
 
