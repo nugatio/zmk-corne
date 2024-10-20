@@ -43,36 +43,36 @@ combos {
     compatible = "zmk,combos";
 
 // clipboard
-COMBO(paste, &kp LG(V),     LT3 LT2)
-COMBO(copy,  &kp LG(C),     LM1 LM0)
-COMBO(cut,   &kp LG(X),     RB3 RB2)
+COMBO(paste, &kp LG(V),     LT2 LT1)
+COMBO(copy,  &kp LG(C),     LM2 LM1)
+COMBO(cut,   &kp LG(X),     LB2 LB1)
 
 // revision
-COMBO(redo,  &kp LG(LS(Z)), LT4 LT3)
-COMBO(undo,  &kp LG(Z),     LM2 LM1)
+COMBO(redo,  &kp LG(LS(Z)), LT3 LT2)
+COMBO(undo,  &kp LG(Z),     LM3 LM2)
 
 // window
-COMBO(quit,  &kp LG(Q),     LT2 LT1)
-COMBO(new,   &kp LG(N),     LM0 LB0)
-COMBO(close, &kp LG(W),     RB2 RB1)
+COMBO(quit,  &kp LG(Q),     LT1 LT0)
+COMBO(new,   &kp LG(N),     LM1 LM0)
+COMBO(close, &kp LG(W),     LB1 LB0)
 
 // structural
 COMBO(lbrc,  &kp LBRC,      RM0 RM1)
-COMBO(rbrc,  &kp RBRC,      RM4 RM5)
+COMBO(rbrc,  &kp RBRC,      RB0 RB1)
 COMBO(lpar,  &kp LPAR,      RM1 RM2)
-COMBO(rpar,  &kp RPAR,      RM5 RB5)
+COMBO(rpar,  &kp RPAR,      RB1 RB2)
 COMBO(lbkt,  &kp LBKT,      RM2 RM3)
-COMBO(rbkt,  &kp RBKT,      RB5 RB4)
+COMBO(rbkt,  &kp RBKT,      RB2 RB3)
 COMBO(lt,    &kp LT,        RM3 RM4)
-COMBO(gt,    &kp GT,        RB4 RB3)
+COMBO(gt,    &kp GT,        RB3 RB4)
 
 // special
-COMBO(at,    &kp AT,        LT0 LT1)
-COMBO(under, &kp UNDER,     LT1 LT2)
-COMBO(equal, &kp EQUAL,     LT2 LT3)
-COMBO(amps,  &kp AMPS,      LT3 LT4)
+COMBO(at,    &kp AT,        RT0 RT1)
+COMBO(under, &kp UNDER,     RT1 RT2)
+COMBO(equal, &kp EQUAL,     RT2 RT3)
+COMBO(amps,  &kp AMPS,      RT3 RT4)
 
 // other
-COMBO(all,   &kp LG(A),     LM3 LM2)
-COMBO(find,  &kp LG(F),     RB4 RB3)
+COMBO(all,   &kp LG(A),     LM4 LM3)
+COMBO(find,  &kp LG(F),     LB3 LB2)
 };
