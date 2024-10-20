@@ -53,5 +53,5 @@ MODMORPH(sds,  shift_dqt_sqt,    &kp DQT,       &kp SQT,      (MOD_LSFT | MOD_RS
 MODMORPH(svup, shift_volup_prev, &kp C_VOL_UP,  &kp C_PREV,   (MOD_LSFT | MOD_RSFT))
 MODMORPH(svmp, shift_volmute_pp, &kp C_MUTE,    &kp C_PP,     (MOD_LSFT | MOD_RSFT))
 MODMORPH(svdn, shift_voldn_next, &kp C_VOL_DN,  &kp C_NEXT,   (MOD_LSFT | MOD_RSFT))
-MODMORPH(sbb,  shift_bspc_sbspc, &lt LEFT BSPC, &kp LA(BSPC), (MOD_LSFT | MOD_RSFT))
+MODMORPH(sbb,  shift_bspc_sbspc, &lt NPFN BSPC, &kp LA(BSPC), (MOD_LSFT | MOD_RSFT))
 };
