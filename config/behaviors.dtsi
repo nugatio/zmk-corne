@@ -43,15 +43,15 @@ behaviors {
     };
 
 // modmorphs
-MODMORPH(seq,  shift_excl_qmrk,  <&kp EXCL>,      <&kp QMARK>,    (MOD_LSFT | MOD_RSFT))
-MODMORPH(sfs,  shift_fslh_star,  <&kp FSLH>,      <&kp STAR>,     (MOD_LSFT | MOD_RSFT))
-MODMORPH(shd,  shift_hash_dllr,  <&kp HASH>,      <&kp DLLR>,     (MOD_LSFT | MOD_RSFT))
-MODMORPH(scs,  shift_comma_semi, <&kp COMMA>,     <&kp SEMI>,     (MOD_LSFT | MOD_RSFT))
-MODMORPH(smp,  shift_minus_plus, <&kp MINUS>,     <&kp PLUS>,     (MOD_LSFT | MOD_RSFT))
-MODMORPH(sdc,  shift_dot_colon,  <&kp DOT>,       <&kp COLON>,    (MOD_LSFT | MOD_RSFT))
-MODMORPH(sds,  shift_dqt_sqt,    <&kp DQT>,       <&kp SQT>,      (MOD_LSFT | MOD_RSFT))
-MODMORPH(svup, shift_volup_prev, <&kp C_VOL_UP>,  <&kp C_PREV>,   (MOD_LSFT | MOD_RSFT))
-MODMORPH(svmp, shift_volmute_pp, <&kp C_MUTE>,    <&kp C_PP>,     (MOD_LSFT | MOD_RSFT))
-MODMORPH(svdn, shift_voldn_next, <&kp C_VOL_DN>,  <&kp C_NEXT>,   (MOD_LSFT | MOD_RSFT))
-MODMORPH(sbb,  shift_bspc_sbspc, <&lt LEFT BSPC>, <&kp LA(BSPC)>, (MOD_LSFT | MOD_RSFT))
+MODMORPH(seq,  shift_excl_qmrk,  &kp EXCL,      &kp QMARK,    (MOD_LSFT | MOD_RSFT))
+MODMORPH(sfs,  shift_fslh_star,  &kp FSLH,      &kp STAR,     (MOD_LSFT | MOD_RSFT))
+MODMORPH(shd,  shift_hash_dllr,  &kp HASH,      &kp DLLR,     (MOD_LSFT | MOD_RSFT))
+MODMORPH(scs,  shift_comma_semi, &kp COMMA,     &kp SEMI,     (MOD_LSFT | MOD_RSFT))
+MODMORPH(smp,  shift_minus_plus, &kp MINUS,     &kp PLUS,     (MOD_LSFT | MOD_RSFT))
+MODMORPH(sdc,  shift_dot_colon,  &kp DOT,       &kp COLON,    (MOD_LSFT | MOD_RSFT))
+MODMORPH(sds,  shift_dqt_sqt,    &kp DQT,       &kp SQT,      (MOD_LSFT | MOD_RSFT))
+MODMORPH(svup, shift_volup_prev, &kp C_VOL_UP,  &kp C_PREV,   (MOD_LSFT | MOD_RSFT))
+MODMORPH(svmp, shift_volmute_pp, &kp C_MUTE,    &kp C_PP,     (MOD_LSFT | MOD_RSFT))
+MODMORPH(svdn, shift_voldn_next, &kp C_VOL_DN,  &kp C_NEXT,   (MOD_LSFT | MOD_RSFT))
+MODMORPH(sbb,  shift_bspc_sbspc, &lt LEFT BSPC, &kp LA(BSPC), (MOD_LSFT | MOD_RSFT))
 };
