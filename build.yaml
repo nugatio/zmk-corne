@@ -20,16 +20,4 @@ include:
 steps:
   - name: Checkout repository
     uses: actions/checkout@v2
-
-  - name: Set up Python environment
-    uses: actions/setup-python@v2
-    with:
-      python-version: '3.x'
-
-  - name: Install Python dependencies
-    run: |
-      python3 -m pip install --upgrade pip
-      python3 -m pip install Pillow
-
-  - name: Convert image to C array
-    run: python3 tools/convert_image.py --input tools/image.bmp --output src/config/my_image.c
+    

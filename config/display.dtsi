@@ -10,7 +10,7 @@ nugatio@2024.09.20 (https://github.com/nugatio/zmk-corne-config)
 // IMPORTS
 
 // image
-#include "my_image.c"
+#include "image.c"
 
 
 // DEFINITION
