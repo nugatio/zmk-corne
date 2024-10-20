@@ -62,6 +62,7 @@ COMBO(gt,    &kp GT,        RB4 RB3)
 COMBO(at,    &kp AT,        LT0 LT1)
 COMBO(under, &kp UNDER,     LT1 LT2)
 COMBO(equal, &kp EQUAL,     LT2 LT3)
+COMBO(amps,  &kp AMPS,      LT3 LT4)
 
 // other
 COMBO(all,   &kp LG(A),     LM3 LM2)

@@ -16,14 +16,15 @@ keymap {
 #define BASE 0
 #define RGHT 1
 #define LEFT 2
+#define NAVI 3
 
 // base
 base_layer {
     /* base layer layout
          ╭─────────────────────╮ ╭─────────────────────╮
-    ESC  │  X   W   M   G   !? │ │ #$  .:  "'   J   B  │ VUP
-    Z    │  S   C   N   T   K  │ │ ,;   A   E   I   H  │ VM
-    CAPS │  V   P   L   D   /* │ │ -+   U   O   Y   F  │ VDN
+    ESC  │  X   W   M   G   !? │ │ #$  .:  "'   J   B  │ VUP/PRV
+    Z    │  S   C   N   T   K  │ │ ,;   A   E   I   H  │ VM/PP
+    CAPS │  V   P   L   D   /* │ │ -+   U   O   Y   F  │ VDN/NXT
          ╰───────╮  Q   R  BSP │ │ SPC RET TAB ╭───────╯
                  ╰─────────────╯ ╰─────────────╯
     */
@@ -39,34 +40,70 @@ base_layer {
 
     display-name = "BASE";
     bindings = <
-    &kp ESC   &kp X        &kp W       &kp M       &kp G        &mseq    &mshd           &msdc        &msds       &kp J       &kp B        &msvup
-    &kp Z     &hm LCTRL S  &hm LALT C  &hm LCMD N  &hm LSHFT T  &kp K    &mscs           &hm RSHFT A  &hm RCMD E  &hm RALT I  &hm RCTRL H  &msvmp
-    &kp CAPS  &kp V        &kp P       &kp L       &kp D        &msfs    &msmp           &kp U        &kp O       &kp Y       &kp F        &msvdn
-                                       &kp Q       &kp R        &msbb    &lt RGHT SPACE  &kp RET      &kp TAB
+    &kp ESC   &kp X        &kp W       &kp M       &kp G        &mseq    &mshd           &msdc         &msds       &kp J       &kp B        &msvup
+    &kp Z     &hm LCTRL S  &hm LALT C  &hm LCMD N  &hm LSHFT T  &kp K    &mscs           &hm RSHFT A   &hm RCMD E  &hm RALT I  &hm RCTRL H  &msvmp
+    &kp CAPS  &kp V        &kp P       &kp L       &kp D        &msfs    &msmp           &kp U         &kp O       &kp Y       &kp F        &msvdn
+                                       &kp Q       &lt NAVI R   &msbb    &lt RGHT SPACE  &lt NAVI RET  &kp TAB
     >;
 };
 
-// TODO
-
 // right
-symbol_function_layer {
+special_layer {
+    /* right layer layout
+        ╭─────────────────────╮ ╭─────────────────────╮
+        │                     │ │      _   @   \      │
+        │  <   [   (   {      │ │      =   &   |   %  │
+        │  >   ]   )   }      │ │      ^   ~          │
+        ╰───────╮     INS DEL │ │             ╭───────╯
+                ╰─────────────╯ ╰─────────────╯
+    */
+
     display-name = "RGHT";
     bindings = <
-    &none  &none     &none     &none      &kp CARET  &none      &none  &kp F7  &kp F8  &kp F9  &kp F12  &none
-    &none  &kp BSLH  &kp PIPE  &kp PRCNT  &kp AMPS   &none      &none  &kp F4  &kp F5  &kp F6  &kp F11  &none
-    &none  &none     &none     &none      &none      &none      &none  &kp F1  &kp F2  &kp F3  &kp F10  &none
-                               &none      &kp INS    &kp DEL    &none  &none   &none
+    &none  &none   &none     &none     &none     &none      &none  &kp UNDER  &kp AT     &kp BSLH  &none      &none
+    &none  &kp LT  &kp LBKT  &kp LPAR  &kp LBRC  &none      &none  &kp EQUAL  &kp AMPS   &kp PIPE  &kp PRCNT  &none
+    &none  &kp GT  &kp RBKT  &kp RPAR  &RBRC     &none      &none  &kp CARET  &kp TILDE  &none     &none      &none
+                             &none     &kp INS   &kp DEL    &none  &none      &none
     >;
 };
 
 // left
-numpad_navigation_layer {
+numpad_function_layer {
+    /* left layer layout
+        ╭─────────────────────╮ ╭─────────────────────╮
+        │  F9 F10 F11 F12 F13 │ │  /   7   8   9   -  │ BUP
+        │  F5  F6  F7  F8 F14 │ │  *   4   5   6   +  │
+        │  F1  F2  F3  F4 F15 │ │  ,   1   2   3   =  │ BDN
+        ╰───────╮         BSP │ │  0  RET  .  ╭───────╯
+                ╰─────────────╯ ╰─────────────╯
+    */
+
     display-name = "LEFT";
     bindings = <
-    &none  &none    &none      &none      &kp C_BRI_UP  &none    &kp FSLH  &kp N7   &kp N8  &kp N9  &kp EQUAL  &none
-    &none  &kp END  &kp PG_DN  &kp PG_UP  &kp HOME      &none    &kp STAR  &kp N4   &kp N5  &kp N6  &kp PLUS   &none
-    &none  &none    &none      &none      &kp C_BRI_DN  &none    &none     &kp N1   &kp N2  &kp N3  &kp MINUS  &none
-                               &none      &none         &none    &kp N0    &kp DOT  &none
+    &none  &kp F9  &kp F10  &kp F11  &kp F12  &kp F13    &kp FSLH    &kp N7   &kp N8   &kp N9  &kp EQUAL  &kp C_BRI_UP
+    &none  &kp F5  &kp F6   &kp F7   &kp F8   &kp F14    &kp STAR    &kp N4   &kp N5   &kp N6  &kp PLUS   &none
+    &none  &kp F1  &kp F2   &kp F3   &kp F4   &kp F15    &nkb COMMA  &kp N1   &kp N2   &kp N3  &kp MINUS  &kp C_BRI_DN
+                            &none    &none    &kp BSPC   &kp N0      &kp RET  &kp DOT
+    >;
+};
+
+// navi
+navigation_layer {
+    /* navi layer layout
+        ╭─────────────────────╮ ╭─────────────────────╮
+        │         HOM PUP     │ │     PUP HOM         │
+     A⮜ │  ⮜   ⮟   ⮝   ⮞   A⮞ │ │ A⮜   ⮜   ⮝   ⮟   ⮞  │ A⮞
+        │         END PDN     │ │     PDN END         │
+        ╰───────╮     ADL ABS │ │             ╭───────╯
+                ╰─────────────╯ ╰─────────────╯
+    */
+
+    display-name = "NAVI";
+    bindings = <
+    &none         &none     &none     &kp HOME     &kp PG_UP       &none            &none         &kp PG_UP  &kp HOME  &kp F9    &kp F12    &none
+    &kp LA(LEFT)  &kp LEFT  &kp DOWN  &kp UP       &kp RIGHT       &kp LA(RIGHT)    &kp LA(LEFT)  &kp LEFT   &kp UP    &kp DOWN  &kp RIGHT  &kp LA(RIGHT)
+    &none         &none     &none     &kp END      &kp PG_DN       &none            &none         &kp PG_DN  &kp END   &kp F3    &kp F10    &none
+                            &none     &kp LA(DEL)  &kp LA(BSPC)    &none            &none         &none
     >;
 };
 };
