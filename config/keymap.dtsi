@@ -62,7 +62,7 @@ special_layer {
     bindings = <
     &none  &none   &none     &none     &none     &none      &none  &kp UNDER  &kp AT     &kp BSLH  &none      &none
     &none  &kp LT  &kp LBKT  &kp LPAR  &kp LBRC  &none      &none  &kp EQUAL  &kp AMPS   &kp PIPE  &kp PRCNT  &none
-    &none  &kp GT  &kp RBKT  &kp RPAR  &RBRC     &none      &none  &kp CARET  &kp TILDE  &none     &none      &none
+    &none  &kp GT  &kp RBKT  &kp RPAR  &kp RBRC  &none      &none  &kp CARET  &kp TILDE  &none     &none      &none
                              &none     &kp INS   &kp DEL    &none  &none      &none
     >;
 };
