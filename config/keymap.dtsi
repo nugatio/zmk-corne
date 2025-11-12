@@ -102,18 +102,18 @@ numpad_function_layer {
 navigation_layer {
     /* navigation (navi) layer layout
         ╭─────────────────────╮ ╭─────────────────────╮
-        │         HOM PUP     │ │     PUP HOM         │
-     A⮜ │  ⮜   ⮟   ⮝   ⮞   A⮞ │ │ A⮜   ⮜   ⮝   ⮟   ⮞  │ A⮞
-        │         END PDN     │ │     PDN END         │
+        │     HOM  ↑  PUP     │ │     PUP HOM         │
+        │  ⇇   ←   ↓   →   ⇉  │ │ A⮜   ⮜   ⮝   ⮟   ⮞  │ A⮞
+        │     END     PDN     │ │     PDN END         │
         ╰───────╮     ADL ABS │ │             ╭───────╯
                 ╰─────────────╯ ╰─────────────╯
     */
 
     display-name = "NAVI";
     bindings = <
-    &none         &none     &none     &kp HOME     &kp PG_UP       &bt BT_CLR       &none         &kp PG_UP  &kp HOME  &kp F9    &kp F12    &none
-    &kp LA(LEFT)  &kp LEFT  &kp DOWN  &kp UP       &kp RIGHT       &kp LA(RIGHT)    &kp LA(LEFT)  &kp LEFT   &kp UP    &kp DOWN  &kp RIGHT  &kp LA(RIGHT)
-    &none         &none     &none     &kp END      &kp PG_DN       &none            &none         &kp PG_DN  &kp END   &kp F3    &kp F10    &none
+    &none  &none         &kp HOME  &kp UP       &kp PG_UP       &bt BT_CLR       &none         &kp PG_UP  &kp HOME  &kp F9    &kp F12    &none
+    &kp    &kp LA(LEFT)  &kp LEFT  &kp DOWN     &kp RIGHT       &kp LA(RIGHT)    &kp LA(LEFT)  &kp LEFT   &kp UP    &kp DOWN  &kp RIGHT  &kp LA(RIGHT)
+    &none  &none         &none     &kp END      &kp PG_DN       &none            &none         &kp PG_DN  &kp END   &kp F3    &kp F10    &none
                             &none     &kp LA(DEL)  &kp LA(BSPC)    &none            &none         &none
     >;
 };
