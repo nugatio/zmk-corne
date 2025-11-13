@@ -66,5 +66,5 @@ MODMORPH(sbb_tap, shift_bspc_tap, &kp BSPC, &kp LA(BSPC), (MOD_LSFT | MOD_RSFT))
         quick-tap-ms = <0>;
         flavor = "tap-preferred";
         bindings = <&mo>, <&msbb_tap>;
-    }
+    };
 };
