@@ -75,4 +75,5 @@ COMBO(amps,  &kp AMPS,      RT3 RT4)
 // other
 COMBO(all,   &kp LG(F16),   LM4 LM3)
 COMBO(find,  &kp LG(F),     LB3 LB2)
+COMBO(esc,   &kp ESC,       LH1 RH1)
 };
