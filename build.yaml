@@ -7,7 +7,7 @@
 # nugatio@2024.09.20 (https://github.com/nugatio/zmk-corne-config)
 
 include:
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: corne_left nice_view_adapter nice_view
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: corne_right nice_view_adapter nice_view
