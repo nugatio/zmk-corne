@@ -9,7 +9,7 @@ layout: hands down neu virbranium v (https://sites.google.com/alanreiser.com/han
      ╭─────────────────────╮ ╭─────────────────────╮
 ESC  │  X   W   M   G   !? │ │ #$  .:  "'   J   B  │ VUP/PRV
 Z    │  S   C   N   T   K  │ │ ,;   A   E   I   H  │ VM/PP
-CAPS │  V   P   L   D   /* │ │ -+   U   O   Y   F  │ VDN/NXT
+CAPS │  V   P   L   D  / * │ │ -+   U   O   Y   F  │ VDN/NXT
      ╰───────╮  Q   R  BSP │ │ SPC RET TAB ╭───────╯
              ╰─────────────╯ ╰─────────────╯
 

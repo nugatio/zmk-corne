@@ -3,11 +3,13 @@ COMBOS
 
 keyboard: corne (https://github.com/foostan/crkbd)
 firmware: zmk (https://zmk.dev/)
-nugatio@2024.09.20 (https://github.com/nugatio/zmk-corne-config)
+layout: hands down (https://sites.google.com/alanreiser.com/handsdown/)
+
+nb@2026.05.30
 */
 
 
-// MACROS
+// ////////// MACROS //////////
 
 #define COMBO(NAME, BINDINGS, KEYPOS) \
     combo_##NAME { \
@@ -17,7 +19,7 @@ nugatio@2024.09.20 (https://github.com/nugatio/zmk-corne-config)
     };
 
 
-// OVERVIEW
+// ////////// OVERVIEW //////////
 
 /* key position names (defined in positions.dtsi)
     ╭─────────────────────╮ ╭─────────────────────╮
@@ -37,26 +39,34 @@ LB5 │ LB4 LB3 LB2 LB1 LB0 │ │ RB0 RB1 RB2 RB3 RB4 │ RB5
 */
 
 
-// DEFINITION
+// ////////// DEFINITION //////////
 
 combos {
     compatible = "zmk,combos";
 
-// clipboard
+
+// :::::::::: CLIPBOARD ::::::::::
+
 COMBO(paste, &kp LG(V),     LT2 LT1)
 COMBO(copy,  &kp LG(C),     LM2 LM1)
 COMBO(cut,   &kp LG(X),     LB2 LB1)
 
-// revision
+
+// :::::::::: REVISION ::::::::::
+
 COMBO(redo,  &kp LG(LS(Z)), LT3 LT2)
 COMBO(undo,  &kp LG(Z),     LM3 LM2)
 
-// window
+
+// :::::::::: WINDOW ::::::::::
+
 COMBO(quit,  &kp LG(Q),     LT1 LT0)
 COMBO(new,   &kp LG(N),     LM1 LM0)
 COMBO(close, &kp LG(W),     LB1 LB0)
 
-// structural
+
+// :::::::::: STRUCTURAL ::::::::::
+
 COMBO(lbrc,  &kp LBRC,      RM0 RM1)
 COMBO(rbrc,  &kp RBRC,      RB0 RB1)
 COMBO(lpar,  &kp LPAR,      RM1 RM2)
@@ -66,13 +76,17 @@ COMBO(rbkt,  &kp RBKT,      RB2 RB3)
 COMBO(lt,    &kp LT,        RM3 RM4)
 COMBO(gt,    &kp GT,        RB3 RB4)
 
-// special
+
+// :::::::::: SPECIAL ::::::::::
+
 COMBO(at,    &kp AT,        RT0 RT1)
 COMBO(under, &kp UNDER,     RT1 RT2)
 COMBO(equal, &kp EQUAL,     RT2 RT3)
 COMBO(amps,  &kp AMPS,      RT3 RT4)
 
-// other
+
+// :::::::::: OTHER ::::::::::
+
 COMBO(all,   &kp LG(F16),   LM4 LM3)
 COMBO(find,  &kp LG(F),     LB3 LB2)
 COMBO(esc,   &kp ESC,       LH1 RH1)

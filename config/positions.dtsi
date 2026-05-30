@@ -5,11 +5,11 @@ keyboard: corne (https://github.com/foostan/crkbd)
 firmware: zmk (https://zmk.dev/)
 layout: hands down (https://sites.google.com/alanreiser.com/handsdown/)
 
-nugatio@2024.09.20 (https://github.com/nugatio/zmk-corne-config)
+nb@2026.05.30
 */
 
 
-// OVERVIEW
+// ////////// OVERVIEW //////////
 
 /* key position numbers
     ╭─────────────────────╮ ╭─────────────────────╮
@@ -30,9 +30,10 @@ LB5 │ LB4 LB3 LB2 LB1 LB0 │ │ RB0 RB1 RB2 RB3 RB4 │ RB5
 */
 
 
-// DEFINITION
+// ////////// DEFINITION //////////
 
-// top
+// :::::::::: TOP ::::::::::
+
 #define LT0 5
 #define LT1 4
 #define LT2 3
@@ -46,7 +47,9 @@ LB5 │ LB4 LB3 LB2 LB1 LB0 │ │ RB0 RB1 RB2 RB3 RB4 │ RB5
 #define RT4 10
 #define RT5 11
 
-// mid
+
+// :::::::::: MID ::::::::::
+
 #define LM0 17
 #define LM1 16
 #define LM2 15
@@ -60,7 +63,9 @@ LB5 │ LB4 LB3 LB2 LB1 LB0 │ │ RB0 RB1 RB2 RB3 RB4 │ RB5
 #define RM4 22
 #define RM5 23
 
-// bot
+
+// :::::::::: BOT ::::::::::
+
 #define LB0 29
 #define LB1 28
 #define LB2 27
@@ -74,7 +79,9 @@ LB5 │ LB4 LB3 LB2 LB1 LB0 │ │ RB0 RB1 RB2 RB3 RB4 │ RB5
 #define RB4 34
 #define RB5 35
 
-// home
+
+// :::::::::: HOME ::::::::::
+
 #define LH3 38
 #define LH1 36
 #define LH2 37

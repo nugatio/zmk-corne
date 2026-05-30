@@ -5,11 +5,11 @@ keyboard: corne (https://github.com/foostan/crkbd)
 firmware: zmk (https://zmk.dev/)
 layout: hands down (https://sites.google.com/alanreiser.com/handsdown/)
 
-nugatio@2024.09.20 (https://github.com/nugatio/zmk-corne-config)
+nb@2026.05.30
 */
 
 
-// MACROS
+// ////////// MACROS //////////
 
 #define MODMORPH(REFERENCE, NAME, BINDINGA, BINDINGB, MODS) \
     m##REFERENCE: modmorph_##NAME { \
@@ -20,7 +20,7 @@ nugatio@2024.09.20 (https://github.com/nugatio/zmk-corne-config)
     };
 
 
-// OVERVIEW
+// ////////// OVERVIEW //////////
 
 /* key position names (defined in positions.dtsi)
     ╭─────────────────────╮ ╭─────────────────────╮
@@ -32,7 +32,7 @@ LB5 │ LB4 LB3 LB2 LB1 LB0 │ │ RB0 RB1 RB2 RB3 RB4 │ RB5
 */
 
 
-// DEFINITION
+// ////////// DEFINITION //////////
 
 behaviors {
     hm: homerow_mods {
@@ -44,7 +44,9 @@ behaviors {
         bindings = <&kp>, <&kp>;
     };
 
-// modmorphs
+
+// :::::::::: MODMORPHS ::::::::::
+
 MODMORPH(seq,  shift_excl_qmrk,  &kp EXCL,      &kp QMARK,    (MOD_LSFT | MOD_RSFT))
 MODMORPH(sfs,  shift_fslh_star,  &kp FSLH,      &kp STAR,     (MOD_LSFT | MOD_RSFT))
 MODMORPH(shd,  shift_hash_dllr,  &kp HASH,      &kp DLLR,     (MOD_LSFT | MOD_RSFT))
@@ -57,7 +59,7 @@ MODMORPH(svmp, shift_volmute_pp, &kp C_MUTE,    &kp C_PP,     (MOD_LSFT | MOD_RS
 MODMORPH(svdn, shift_voldn_next, &kp C_VOL_DN,  &kp C_NEXT,   (MOD_LSFT | MOD_RSFT))
 // MODMORPH(sbb,  shift_bspc_sbspc, &lt 2 BSPC, &kp LA(BSPC), (MOD_LSFT | MOD_RSFT))
 
-// Backspace with layer access that works with modifiers
+// backspace with layer access that works with modifiers
 MODMORPH(sbb_tap, shift_bspc_tap, &kp BSPC, &kp LA(BSPC), (MOD_LSFT | MOD_RSFT))
     msbb: backspace_layer_tap {
         compatible = "zmk,behavior-hold-tap";

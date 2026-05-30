@@ -5,11 +5,11 @@ keyboard: corne (https://github.com/foostan/crkbd)
 firmware: zmk (https://zmk.dev/)
 layout: hands down (https://sites.google.com/alanreiser.com/handsdown/)
 
-nugatio@2024.09.20 (https://github.com/nugatio/zmk-corne-config)
+nb@2026.05.30
 */
 
 
-// POSITIONS
+// ////////// POSITIONS //////////
 
 /* numbers
     ╭─────────────────────╮ ╭─────────────────────╮
@@ -30,13 +30,13 @@ LB5 │ LB4 LB3 LB2 LB1 LB0 │ │ RB0 RB1 RB2 RB3 RB4 │ RB5
 */
 
 
-// KEYMAPS
+// ////////// KEYMAPS //////////
 
 /* base layer layout
      ╭─────────────────────╮ ╭─────────────────────╮
 ESC  │  X   W   M   G   !? │ │ #$  .:  "'   J   B  │ VUP/PRV
 Z    │  S   C   N   T   K  │ │ ,;   A   E   I   H  │ VM/PP
-CAPS │  V   P   L   D   /* │ │ -+   U   O   Y   F  │ VDN/NXT
+CAPS │  V   P   L   D  / * │ │ -+   U   O   Y   F  │ VDN/NXT
      ╰───────╮  Q   R  BSP │ │ SPC RET TAB ╭───────╯
              ╰─────────────╯ ╰─────────────╯
 */

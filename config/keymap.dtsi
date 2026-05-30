@@ -5,28 +5,32 @@ keyboard: corne (https://github.com/foostan/crkbd)
 firmware: zmk (https://zmk.dev/)
 layout: hands down (https://sites.google.com/alanreiser.com/handsdown/)
 
-nugatio@2024.09.20 (https://github.com/nugatio/zmk-corne-config)
+nb@2026.05.30
 */
 
 
-// DEFINITION
+// ////////// DEFINITION //////////
 
 keymap {
     compatible = "zmk,keymap";
 
-// layer names
+
+// :::::::::: LAYER NAMES ::::::::::
+
 #define BASE 0
 #define SYMB 1
 #define NPFN 2
 #define NAVI 3
 
-// base
+
+// :::::::::: BASE ::::::::::
+
 base_layer {
     /* base layer layout
          ╭─────────────────────╮ ╭─────────────────────╮
     ESC  │  X   W   M   G   !? │ │ #$  .:  "'   J   B  │ VUP/PRV
     Z    │  S   C   N   T   K  │ │ ,;   A   E   I   H  │ VM/PP
-    CAPS │  V   P   L   D   /* │ │ -+   U   O   Y   F  │ VDN/NXT
+    CAPS │  V   P   L   D  / * │ │ -+   U   O   Y   F  │ VDN/NXT
          ╰───────╮  Q   R  BSP │ │ SPC RET TAB ╭───────╯
                  ╰─────────────╯ ╰─────────────╯
     */
@@ -58,7 +62,9 @@ base_layer {
     >;
 };
 
-// symb
+
+// :::::::::: SYMB ::::::::::
+
 symbol_layer {
     /* symbol (symb) layer layout
         ╭─────────────────────╮ ╭─────────────────────╮
@@ -78,7 +84,9 @@ symbol_layer {
     >;
 };
 
-// npfn
+
+// :::::::::: NPFN ::::::::::
+
 numpad_function_layer {
     /* numpad function (npfn) layer layout
         ╭─────────────────────╮ ╭─────────────────────╮
@@ -98,7 +106,9 @@ numpad_function_layer {
     >;
 };
 
-// navi
+
+// :::::::::: NAVI ::::::::::
+
 navigation_layer {
     /* navigation (navi) layer layout
         ╭─────────────────────╮ ╭─────────────────────╮
